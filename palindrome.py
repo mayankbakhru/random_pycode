@@ -3,7 +3,7 @@ def main():
     print("\ninput a string:")
     str1=input()
     print ("String", str1, "is a palindrome:",PD(str1.lower()))
-    # print(str1)
+    
 
 def PD(str1):
     strdict = {sd:0 for sd in str1}
