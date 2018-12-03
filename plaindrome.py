@@ -6,6 +6,7 @@ def main():
     # print(str1)
 
 def PD(str1):
+    # print ("string length is:",len(str1))
     strdict = {sd:0 for sd in str1}
     result = False
     odd_counter = 0
