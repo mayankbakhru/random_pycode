@@ -4,7 +4,7 @@
 import turtle
 
 wn = turtle.Screen()
-wn.title(" Pong by MB")
+wn.title(" Pong by Mayank Bakhru")
 wn.bgcolor("black")
 wn.setup(width=800,height=600)
 wn.tracer(0)
@@ -53,18 +53,26 @@ def paddle_a_up():
     y = paddle_a.ycor()
     y += 20
     paddle_a.sety(y)
+    if (paddle_a.ycor() > 290):
+        paddle_a.sety(-290)
 def paddle_a_down():
     y = paddle_a.ycor()
     y -= 20
     paddle_a.sety(y)
+    if (paddle_a.ycor() < -290):
+        paddle_a.sety(290)
 def paddle_b_up():
     y = paddle_b.ycor()
     y += 20
     paddle_b.sety(y)
+    if (paddle_b.ycor() > 290):
+        paddle_b.sety(-290)
 def paddle_b_down():
     y = paddle_b.ycor()
     y -= 20
     paddle_b.sety(y)
+    if (paddle_b.ycor() < -290):
+        paddle_b.sety(290)
 
 # Keyboard binding
 wn.listen()
@@ -111,4 +119,3 @@ while True:
     if ((ball.xcor() < -340 and ball.xcor() > -350 ) and (ball.ycor() < paddle_a.ycor() + 40 and ball.ycor() > paddle_a.ycor() - 40)):
         ball.setx(-340)
         ball.dx *= -1
-
