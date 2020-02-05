@@ -1,4 +1,9 @@
 import random
+import sys
+sys.setrecursionlimit(10**6)
+# Program is written to count number of islands in a given 2x2 matrix.
+# Consecutive 1s in rows and colums up and down make a island(not diagnally)
+# 0s are considered water.
 checked = list()
 
 def main ():
