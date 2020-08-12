@@ -30,8 +30,10 @@ def guess(chosen,current, wrong_count,wrong_guess):
         res_flag = 1
     else:
         print ("you guessed wrong :(")       
-        wrong_guess.append(var)
-        wrong_count = wrong_count+1
+        
+        if var not in wrong_guess:
+            wrong_guess.append(var)
+            wrong_count = wrong_count+1
         print_hangman(wrong_count)
         print("You have not unlocked any new spots:(")    
         print_list(current)
@@ -73,10 +75,6 @@ def main1():
     return (0)
 
     
-
-    
-
-
 def print_hangman(pos):
     # x = input()
     hangman = ["--",'|','|0','|+',' |','/'," \\"]
